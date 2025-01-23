@@ -43,29 +43,25 @@ jobs:
           run: |
               echo "Current directory before removal:"
               pwd
-              ls -R ngrxNew/src/app
               rm -rf ngrxNew/src/app/*
+              cp -R src/app ngrxNew/src/app 
+              cd ngrxNew
 
-        - name: Contents of src after remove
-          run: |
-            cd ngrxNew/src/app
-            echo "Contents of extension/src after remove:"
-            ls -R .
+        # - name: Contents of src after remove
+        #   run: |
+        #     cd ngrxNew/src/app
+        #     echo "Contents of extension/src after remove:"
+        #     ls -R .
 
-        - name: Copy Build to ngrx Repository
-          run: |
-            cp -R src/app ngrxNew/src/app 
-            cd ngrxNew
+        # - name: Copy Build to ngrx Repository
+        #   run: |
+        #     cp -R src/app ngrxNew/src/app 
+        #     cd ngrxNew
 
         - name: Contents of src after copy
           run: |
             cd ngrxNew/src/app
             echo "Contents of extension/src before copy:"
-            ls -R .
-
-        - name: Go back to the original repo
-          run: |
-            echo "Back to the original repository"
             ls -R .
 
 
