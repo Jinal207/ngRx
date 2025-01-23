@@ -16,3 +16,18 @@ jobs:
           run: |
               npm install --f
 
+        - name: Clone ngrx2 Repository
+          run: |
+            git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Jinal207/ngrx2.git ngrxNew
+            cd ngrxNew
+
+        - name: Check if repository is cloned
+          run: |
+            if [ -d "ngrxNew" ]; then
+              echo "Repository cloned successfully."
+              cd ngrxNew
+              git status
+            else
+              echo "Cloning failed."
+              exit 1
+            fi
