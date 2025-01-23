@@ -63,6 +63,12 @@ jobs:
             echo "Contents of extension/src before copy:"
             ls -R .
 
+        - name: Go back to the original repo
+          run: |
+            cd ..
+            echo "Back to the original repository"
+            ls -R .
+
 
 
 
