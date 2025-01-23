@@ -16,6 +16,3 @@ jobs:
           run: |
               npm install --f
 
-        - name: Run App
-          run: |
-               npm run start
