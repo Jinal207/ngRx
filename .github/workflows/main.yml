@@ -35,7 +35,7 @@ jobs:
 
         - name: Check contents of src/app
           run: |
-            cd ngrxNew/src
+            cd ngrxNew/src/app
             echo "Current directory structure:"
             ls -R .
 
@@ -46,9 +46,9 @@ jobs:
 
         - name: Check contents of src/app
           run: |
-            cd ngrxNew/src
+            cd ngrxNew/src/app
             echo "Contents of extension/src before copy:"
-            ls -R src/app
+            ls -R .
 
         - name: Copy Build to ngrx Repository
           run: |
