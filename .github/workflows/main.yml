@@ -65,7 +65,6 @@ jobs:
 
         - name: Go back to the original repo
           run: |
-            cd ..
             echo "Back to the original repository"
             ls -R .
 
