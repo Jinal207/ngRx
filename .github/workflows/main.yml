@@ -39,17 +39,17 @@ jobs:
             echo "Current directory structure:"
             ls -R .
 
-        - name: Remove old files in src/app
-          run: |
-              echo "Current directory before removal:"
-              pwd
-              ls -R ngrxNew/src/app
-              rm -rf ngrxNew/src/app/*
+        # - name: Remove old files in src/app
+        #   run: |
+        #       echo "Current directory before removal:"
+        #       pwd
+        #       ls -R ngrxNew/src/app
+        #       rm -rf ngrxNew/src/app/*
 
         - name: Check contents of src/app
           run: |
             cd ngrxNew/src/app
-            echo "Contents of extension/src before copy:"
+            echo "Contents of extension/src after remove:"
             ls -R .
 
         - name: Copy Build to ngrx Repository
