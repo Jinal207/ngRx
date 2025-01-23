@@ -36,6 +36,7 @@ jobs:
         - name: Check contents of src/app
           run: |
             cd ngrxNew
+            cd src
             echo "Current directory structure:"
             ls -R .
 
