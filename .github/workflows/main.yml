@@ -20,6 +20,7 @@ jobs:
           run: |
             git clone https://x-access-token:${{ secrets.TOKEN_NGRX }}@github.com/Jinal207/ngrx2.git ngrxNew
             cd ngrxNew
+            git checkout feature/demo
 
         - name: Check if repository is cloned
           run: |
@@ -31,3 +32,35 @@ jobs:
               echo "Cloning failed."
               exit 1
             fi
+
+        - name: Check contents of src/app
+          run: |
+            cd ngrxNew/src
+            echo "Contents of extension/src before copy:"
+            ls -R src/app
+
+        - name: Remove old files in src/app
+          run: |
+            cd ngrxNew/src
+            rm -rf src/app/*
+
+        - name: Check contents of src/app
+          run: |
+            cd ngrxNew/src
+            echo "Contents of extension/src before copy:"
+            ls -R src/app
+
+        - name: Copy Build to ngrx Repository
+          run: |
+            cp -R src/app ngrxNew/src/app 
+            cd ngrxNew
+
+        - name: Check contents of src/app
+          run: |
+            cd ngrxNew/src
+            echo "Contents of extension/src before copy:"
+            ls -R src/app
+
+
+
+
