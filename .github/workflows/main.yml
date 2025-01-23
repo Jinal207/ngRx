@@ -39,14 +39,14 @@ jobs:
             echo "Current directory structure:"
             ls -R .
 
-        # - name: Remove old files in src/app
-        #   run: |
-        #       echo "Current directory before removal:"
-        #       pwd
-        #       ls -R ngrxNew/src/app
-        #       rm -rf ngrxNew/src/app/*
+        - name: Remove old files in src/app
+          run: |
+              echo "Current directory before removal:"
+              pwd
+              ls -R ngrxNew/src/app
+              rm -rf ngrxNew/src/app/*
 
-        - name: Check contents of src/app
+        - name: Contents of src after remove
           run: |
             cd ngrxNew/src/app
             echo "Contents of extension/src after remove:"
@@ -57,11 +57,11 @@ jobs:
             cp -R src/app ngrxNew/src/app 
             cd ngrxNew
 
-        - name: Check contents of src/app
+        - name: Contents of src after copy
           run: |
             cd ngrxNew/src/app
             echo "Contents of extension/src before copy:"
-            ls -R src/app
+            ls -R .
 
 
 
