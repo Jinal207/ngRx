@@ -18,7 +18,7 @@ jobs:
 
         - name: Clone ngrx2 Repository
           run: |
-            git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Jinal207/ngrx2.git ngrxNew
+            git clone https://x-access-token:${{ secrets.TOKEN_NGRX }}@github.com/Jinal207/ngrx2.git ngrxNew
             cd ngrxNew
 
         - name: Check if repository is cloned
