@@ -35,8 +35,9 @@ jobs:
 
         - name: Check contents of src/app
           run: |
+            cd ngrxNew
             echo "Current directory structure:"
-            ls -R ngrxNew.
+            ls -R .
 
         - name: Remove old files in src/app
           run: |
